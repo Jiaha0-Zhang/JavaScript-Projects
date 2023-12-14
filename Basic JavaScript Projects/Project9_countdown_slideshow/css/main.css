@@ -1,0 +1,71 @@
+.carousel{  
+    width: 600px;     /*set carousel width*/
+    height: 300px;    /*set carousel height*/
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    display: flex;
+    transition: all 1s; /*animation transition time*/
+}
+
+.carousel .container img{
+    width: 100%;  /*set imgs width*/
+    height: 100%; /*set imgs height*/
+    flex-shrink: 0;  /*Prevents images from being compressed */
+    object-fit: cover; /*Prevents images aspect ratio from being changed*/
+}
+
+.carousel .shift .btn{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    margin: auto 0;
+    background-color: teal;
+    color: wheat;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 50px; /*texts are centered horizontally and vertically*/
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+.carousel .shift .left{
+    left: 10px;   /*leftshift to the left edge distance*/
+}
+.carousel .shift .right{
+    right: 10px; /*rightshift to the right edge distance*/
+}
+
+
+.carousel .bottom
+{
+    position: absolute; 
+    bottom: 20px;
+
+    left: 0;         /* Absolute positioning horizontally centered*/
+    right: 0;        /* Absolute positioning horizontally centered*/
+    margin: 0 auto;  /* Absolute positioning horizontally centered*/
+ 
+    width: max-content;   /*The width is equal to the width of the content*/
+    display: flex;
+    gap:10px;
+    
+}
+
+.carousel .bottom .indicator
+{
+    height: 5px;
+    width: 40px;
+    background-color: teal;
+    cursor: pointer;
+}

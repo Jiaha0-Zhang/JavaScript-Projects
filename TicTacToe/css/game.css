@@ -1,5 +1,5 @@
 /*This container includes our table and our canvas.*/
-.center-contaier{
+.center-container{
     width: 608px; /*This property sets the width of our container.*/
     margin: 0 auto; /*This property centers our contaier.*/
     margin-top: 50px; /*50px down from the top*/

@@ -37,7 +37,7 @@ function  placeXOrO(squareNumber)
             disableClick(); //This function disables clicking for computers turn.
             setTimeout(function(){computersTurn();}, 1000); //This function waits 1 second before the computer places an image and enables clicks.
         }
-        return ture;
+        return true;
     }
 
     function computersTurn() //This function results in a random square being selected by the computer.
@@ -77,11 +77,11 @@ function checkWinConditions()   //This function parses the selectedSquares array
     
     else if (selectedSquares.length >= 9) //This condition checks for a tie. if none of the above conditions are met
     {                                     //and 9 squares are selected the code executes.
-        audio('./media/tie.mp3') //This function plays the tie game sound.
+        audio('./media/tie.mp3'); //This function plays the tie game sound.
         setTimeout(function(){resetGame();}, 500); //This function sets a .3 second timer before the resetGame is called.
     }
 
-    function arrayIncludes(squareA, squareB,squareC) //This function checks if any array includes 3 strings. 
+    function arrayIncludes(squareA, squareB, squareC) //This function checks if any array includes 3 strings. 
     {                                                //It is used to check for each win condition.
         const a = selectedSquares.includes(squareA); 
         const b = selectedSquares.includes(squareB); //These 3 variables will be used to check for 3 in a row.
@@ -100,11 +100,11 @@ function disableClick() //This function makes our body element temporarily uncli
     setTimeout(function(){body.style.pointerEvents = 'auto';}, 1000); //this makes our body clickable again after 1 second.
 }
 
-// function audio(audioURL) //This function takes a string parameter of the path you set earlier for placement sound('./media/place.mp3')
-// {
-//     let audio = new Audio(audioURL); //we create a new audio object and we pass the path as a parameter.
-//     audio.play(); //Play method plays our audio sound.
-// }
+function audio(audioURL) //This function takes a string parameter of the path you set earlier for placement sound('./media/place.mp3')
+{
+    let audio = new Audio(audioURL); //we create a new audio object and we pass the path as a parameter.
+    audio.play(); //Play method plays our audio sound.
+}
 
 function drawWinLine(coordX1, coordY1, coordX2, coordY2) //this function utilize HTML canvas to draw win lines.
 {
@@ -128,7 +128,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) //this function utilize
         c.strokeStyle = 'rgba(70, 255, 33, .8)'; //this method sets the color of our line.
         c.stroke(); //this method draws everything we laid out above.
 
-        if(x1 < x2 && y1 <= y2) //this condition checks if we've reached end x endpoint.
+        if(x1 <= x2 && y1 <= y2) //this condition checks if we've reached end x endpoint.
         {
             if(x < x2) //this condition adds 10 to the previous end x endpoint.
             {
@@ -178,7 +178,7 @@ function resetGame() //this function resets the game in the event of a tie or a 
     for(let i = 0; i < 9 ; i++ )  //this for loop iterates through each HTML square element.
     {
         let square = document.getElementById(String(i)); //This variable gets the HTML element i.
-        square.style.backgroundImage = ''; //this removes our elements backgroundImage.
+        square.style.backgroundImage =''; //this removes our elements backgroundImage.
     }
     selectedSquares = [];
 }

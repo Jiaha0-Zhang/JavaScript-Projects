@@ -1,0 +1,74 @@
+#menuBG{
+    width: 500px;
+    height: 470px;
+    margin: 10px auto; /*place whole menu on the center of page*/
+}
+
+#frmMenu{
+    width: 600px;  
+    height: 200px;
+}
+
+#totalPrice{
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    float: right;
+}
+
+.left{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.right{
+    width: 200px;
+    height: 200px;
+    float: right;
+}
+
+.medium{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+#showText{
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+}
+
+#cart{
+    top: 0;
+    margin: 0px auto;
+    width: 400px;
+    height: 200px;
+}
+
+#btnOrder{  /*"Place order" botton*/
+    margin: 10px 0px 0px 100px;
+    width: 100px;
+    height: 40px;
+    margin: 25px auto; /*centering botton */
+    display: block;
+}
+
+body{
+    background-color: darkorange;
+}
+
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: mistyrose;
+    font-style: italic;
+    font-weight: bold;
+}
+
+h3, div{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: mistyrose;
+}
+

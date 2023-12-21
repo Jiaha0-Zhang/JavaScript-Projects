@@ -1,0 +1,42 @@
+html{
+    font-family: "Avenir Next", Helvetica, sans-serif;
+    text-align: center;
+}
+
+body{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input{
+    padding-top: 30px; /*Lengthen the input box 30px from the top*/
+    width: 500px; /*Width the input box horizontally by 500px*/
+    height: 60px; /*Raise the input box height to 60px*/
+    font-size: 40px;
+    border: 0; /*no border*/
+}
+
+input:focus{
+    outline: none;
+}
+
+li{
+    text-align: left;
+    font-size: 40px;
+    list-style: none;
+    margin: 0;
+}
+
+footer{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    margin-top: 803px;
+    bottom: 0;
+    width: 100%; 
+    height: 20px; 
+    background-color: #03e9f4;
+}
+
+.remove{
+    padding-bottom: 5px;
+}
